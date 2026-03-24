@@ -1,6 +1,15 @@
 dschemaVersion: 2.2.2
 metadata:
   name: pacman
+attributes:
+  .vscode/settings.json: |
+    {
+      "remote.portsAttributes": {
+        "13131-13133": {
+          "onAutoForward": "ignore"
+        }
+      }
+    }
 projects:
   - name: pacman
     git:
