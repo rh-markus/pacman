@@ -5,7 +5,7 @@ projects:
   - name: pacman
     git:
       remotes:
-        origin: 'https://github.com/marrober/pacman.git'
+        origin: 'https://github.com/rh-markus/pacman.git'
       checkoutFrom: 
         revision: main
 components:
@@ -17,11 +17,33 @@ components:
           name: nodejs
           protocol: https
           targetPort: 8080
+        - name: code-redirect-1
+          targetPort: 13131
+          exposure: none
+          protocol: https
+          attributes:
+            discoverable: false
+            urlRewriteSupported: false
+        - name: code-redirect-2
+          targetPort: 13132
+          exposure: none
+          protocol: https
+          attributes:
+            discoverable: false
+              urlRewriteSupported: false
+        - name: code-redirect-3
+          targetPort: 13133
+          exposure: none
+          protocol: https
+          attributes:
+            discoverable: false
+            urlRewriteSupported: false
       memoryLimit: 1Gi
       memoryRequest: 600Mi
       cpuLimit: '0.5'
       cpuRequest: '0.25'
       mountSources: true
+    
 commands:
   - id: 1-dependencies
     exec:
