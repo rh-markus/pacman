@@ -40,15 +40,15 @@ components:
           protocol: https
           secure: true
           targetPort: 3100
-        - exposure: internal
+        - exposure: none
           name: code-redirect-1
           protocol: https
           targetPort: 13131
-        - exposure: internal
+        - exposure: none
           name: code-redirect-2
           protocol: https
           targetPort: 13132
-        - exposure: internal
+        - exposure: none
           name: code-redirect-3
           protocol: https
           targetPort: 13133
