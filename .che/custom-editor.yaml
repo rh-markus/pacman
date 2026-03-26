@@ -40,24 +40,15 @@ components:
           protocol: https
           secure: true
           targetPort: 3100
-        - attributes:
-            discoverable: false
-            urlRewriteSupported: false
-          exposure: internal
+        - exposure: internal
           name: code-redirect-1
           protocol: https
           targetPort: 13131
-        - attributes:
-            discoverable: false
-            urlRewriteSupported: false
-          exposure: internal
+        - exposure: internal
           name: code-redirect-2
           protocol: https
           targetPort: 13132
-        - attributes:
-            discoverable: false
-            urlRewriteSupported: false
-          exposure: internal
+        - exposure: internal
           name: code-redirect-3
           protocol: https
           targetPort: 13133
